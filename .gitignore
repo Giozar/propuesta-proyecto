@@ -1,0 +1,46 @@
+# Archivos auxiliares generados por LaTeX
+*.aux
+*.bbl
+*.blg
+*.brf
+*.log
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.out
+*.toc
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+
+# Archivos PDF generados
+*.pdf
+
+# Archivos temporales de VSCode y LaTeX Workshop
+.vscode/
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+
+# Archivos de compilación intermedios
+*.dvi
+*.ps
+*.xdv
+
+# Archivos de backup o swap de editores
+*~
+*.bak
+*.swp
+*.tmp
+*.sav
+
+# Carpetas o archivos temporales
+_*
+build/
+dist/
