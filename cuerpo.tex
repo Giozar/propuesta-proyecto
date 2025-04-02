@@ -1,7 +1,7 @@
 \pagestyle{fancy}
 \section{Introducción}
 
-AironTools es una empresa mexicana con más de una década de experiencia en la producción y comercialización de herramientas industriales. A lo largo de su trayectoria ha consolidado una base de clientes recurrentes en el sector metalmecánico y de servicios técnicos. Sin embargo, actualmente enfrenta importantes desafíos operativos derivados del uso de procesos manuales y herramientas no integradas para la gestión interna y la atención a clientes.
+AironTools es una empresa mexicana con más de una década de experiencia en la producción y comercialización de herramientas industriales. A lo largo de su trayectoria ha consolidado una base de clientes recurrentes en el sector industrial mécanico y automotriz. Sin embargo, actualmente enfrenta importantes desafíos operativos derivados del uso de procesos manuales y herramientas no integradas para la gestión interna y la atención a clientes.
 
 La gestión de servicios técnicos, inventario, comunicación interna y control de información se realiza mediante hojas de cálculo y formatos físicos, lo que ha derivado en dificultades para la trazabilidad de los servicios, errores en el registro de información, pérdida de datos importantes para la toma de decisiones, y una experiencia limitada para el cliente, al no contar con un sistema que le permita dar seguimiento a sus solicitudes de manera eficiente.
 
@@ -19,7 +19,7 @@ Los registros actuales de clientes, servicios, inventario y empleados se realiza
 
 Frente a este panorama, la implementación de un sistema de gestión empresarial integral representa una solución estratégica. Este sistema permitirá centralizar en una sola plataforma la información relacionada con empleados, clientes, servicios y productos, lo que facilitará la trazabilidad del flujo de trabajo desde la solicitud de un servicio hasta la entrega final. Además, la automatización de notificaciones y la digitalización de los procesos permitirán establecer una comunicación más eficiente con los clientes, otorgándoles información puntual y transparente sobre el avance de sus solicitudes.
 
-Otra ventaja clave de esta solución es la optimización del control de inventario. A través de funciones como alertas de stock, reportes automáticos y seguimiento de movimientos, será posible reducir errores, evitar faltantes críticos y anticipar necesidades operativas. A su vez, los reportes generados por el sistema facilitarán la toma de decisiones basadas en datos reales y actualizados, incrementando la capacidad de análisis y planificación de la empresa.
+Otra ventaja clave de esta solución es la optimización del control de inventario. A través de funciones como reportes automático, será posible reducir errores, evitar datos faltantes críticos en documentaciones técnicas y anticipar necesidades operativas. A su vez, los reportes generados por el sistema facilitarán la toma de decisiones basadas en datos reales y actualizados, incrementando la capacidad de análisis y planificación de la empresa.
 
 En conjunto, esta propuesta tecnológica contribuirá a mejorar la productividad interna, profesionalizar la operación diaria y elevar la calidad del servicio ofrecido a los clientes. También permitirá documentar formalmente los procesos internos, asegurando su replicabilidad y continuidad. La digitalización de estas funciones no solo responde a una necesidad interna urgente, sino que posiciona a AironTools como una empresa moderna, eficiente y con visión de crecimiento sostenible en un mercado altamente competitivo.
 
@@ -28,13 +28,13 @@ Diseñar un sistema digital de gestión empresarial para AironTools que automati
 
 \section{Objetivos específicos}
 \begin{enumerate}
-	\item Desarrollar un módulo de gestión de usuarios que permita registrar, organizar y asignar roles diferenciados al personal de AironTools según sus funciones operativas.
+	\item Desarrollar un módulo de gestión de usuarios que permita registrar, organizar y asignar roles diferenciados al personal de AironTools según sus funciones operativas mediante permisos.
 
 	\item Implementar un módulo de gestión de clientes que facilite el registro, seguimiento del historial de atención y mejora en la comunicación con los clientes.
 
 	\item Automatizar el flujo completo de los servicios técnicos, desde el ingreso del equipo hasta su entrega, integrando notificaciones en cada etapa del proceso.
 
-	\item Diseñar un módulo de control de inventario que gestione entradas, salidas, movimientos de productos y alertas por niveles críticos de stock.
+	\item Diseñar un módulo de control de inventario que permita registrar, editar y consultar productos con sus respectivos detalles, funcionando como catálogo actualizado de herramientas.
 \end{enumerate}
 
 \section{Trabajos relacionados}
@@ -146,94 +146,114 @@ Esta investigación abordó la desconexión entre áreas de atención al cliente
 	\end{longtable}
 	
 
-	\section{Descripción técnica}
+\section{Descripción técnica}
 
-	El sistema propuesto para AironTools es una aplicación web empresarial compuesta por varios módulos funcionales que permiten automatizar y centralizar procesos clave como la atención al cliente, la gestión de servicios técnicos, el control de inventario y la comunicación interna. Estos módulos se integran mediante una arquitectura escalable que permite la interacción eficiente entre las distintas áreas operativas de la empresa.
-	
-	\subsection*{Arquitectura general del sistema}
-	
-	El sistema sigue un enfoque modular basado en microservicios, donde cada módulo funciona de forma autónoma pero coordinada mediante APIs RESTful. Esta arquitectura facilita el mantenimiento, la escalabilidad y la integración de nuevos componentes.
-	
-	La Figura~\ref{fig:arquitectura} muestra una vista general de la arquitectura del sistema, con sus principales componentes e interacciones.
-	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.9\textwidth]{sistema.png}
-		\caption{Arquitectura general del sistema propuesto para AironTools.}
-		\label{fig:arquitectura}
-	\end{figure}
-	
-	\subsection*{Módulo de usuarios y roles}
-	
-	Este módulo gestiona el acceso al sistema. Permite autenticar usuarios y asignarles distintos roles, como administrador, técnico, ventas o soporte. Su función es garantizar la seguridad del sistema y el acceso segmentado según responsabilidades.
-	
-	\subsection*{Módulo de clientes}
-	
-	Este módulo permite el registro de clientes, así como la consulta de su historial de servicios y datos de contacto. Facilita el seguimiento de cada cliente y mejora la experiencia de atención mediante un acceso rápido y centralizado a su información.
-	
-	\subsection*{Módulo de servicios técnicos}
-	
-	Administra todo el flujo operativo relacionado con los servicios que presta AironTools, como la reparación de herramientas. Incluye el registro del equipo, análisis técnico, cotización, reparación, entrega y recepción final. El flujo completo de este proceso se muestra en la Figura~\ref{fig:secuencia}.
-	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.9\textwidth]{secuencia-sistema.png}
-		\caption{Diagrama de secuencia que representa el flujo de atención a servicios técnicos.}
-		\label{fig:secuencia}
-	\end{figure}
-	
-	Además, los principales casos de uso del sistema, asociados al módulo de servicios técnicos, se ilustran en la Figura~\ref{fig:casosuso}.
-	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.9\textwidth]{casos-uso-sistema.png}
-		\caption{Diagrama de casos de uso del sistema.}
-		\label{fig:casosuso}
-	\end{figure}
-	
-	\subsection*{Módulo de inventario}
-	
-	Este módulo controla las existencias de productos, herramientas y refacciones. Permite registrar entradas, salidas y movimientos de stock, y genera alertas automáticas cuando se detectan niveles críticos. Su objetivo es prevenir faltantes y optimizar la gestión de recursos físicos.
-	
-	\subsection*{Módulo de notificaciones y comunicación interna}
-	
-	Incorpora funciones de mensajería interna y notificaciones automáticas que informan tanto a empleados como a clientes sobre el estado de sus solicitudes. Mejora la coordinación entre áreas y proporciona una atención más transparente al cliente.
-	
-	\subsection*{Resumen visual de módulos e interacciones}
-	
-	La Figura~\ref{fig:modulos} muestra un esquema con los módulos del sistema y sus interacciones, evidenciando cómo se comunican y complementan entre sí para cumplir con los objetivos operativos.
-	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.9\textwidth]{componentes-sistema.png}
-		\caption{Módulos principales del sistema de gestión y sus interacciones.}
-		\label{fig:modulos}
-	\end{figure}
-	
-	\section{Especificación técnica}
+El sistema propuesto para AironTools es una aplicación web de gestión empresarial compuesta por módulos funcionales independientes que automatizan y centralizan los procesos clave de la organización. Está orientado a mejorar la atención al cliente, la administración de servicios técnicos, el control de productos y la coordinación interna. Todos los módulos interactúan bajo una arquitectura escalable y mantenible, permitiendo su crecimiento progresivo.
 
-	El sistema de gestión empresarial para AironTools será accesible mediante una aplicación web y estará conformado por módulos que operan de forma integrada. El proyecto contempla el desarrollo de funcionalidades específicas orientadas a los procesos clave de la empresa: atención al cliente, gestión de servicios técnicos, control de inventario, comunicación interna y administración de usuarios.
+\subsection*{Arquitectura general del sistema}
+
+El sistema sigue una arquitectura modular cliente-servidor, donde el backend y el frontend se desarrollan de forma desacoplada. La comunicación entre ambos se realiza mediante APIs RESTful. Esta estructura permite una mayor flexibilidad, mantenibilidad y facilidad de integración futura con nuevas funcionalidades.
+
+La Figura~\ref{fig:arquitectura} muestra una vista general de la arquitectura del sistema con sus principales componentes.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{sistema.png}
+	\caption{Arquitectura general del sistema propuesto para AironTools.}
+	\label{fig:arquitectura}
+\end{figure}
+
+\subsection*{Módulo de usuarios y roles}
+
+Este módulo permite registrar empleados, asignar roles diferenciados y gestionar permisos de acceso al sistema. Incluye funcionalidades de autenticación y autorización para garantizar la seguridad del sistema, además de una interfaz de administración para el rol de superadministrador.
+
+\subsection*{Módulo de clientes}
+
+Permite registrar tanto a clientes individuales como a empresas, asociando datos de contacto e historial de servicios recibidos. Este módulo se integra con el sistema de notificaciones para mantener informados a los clientes durante cada etapa del servicio técnico.
+
+\subsection*{Módulo de servicios técnicos}
+
+Automatiza el flujo completo de atención a servicios como reparación, mantenimiento, demostración y cotización. El sistema registra desde el ingreso del equipo hasta su diagnóstico, reparación, validación final y entrega al cliente. Se incluyen notificaciones automáticas por cambios de estado.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{secuencia-sistema.png}
+	\caption{Diagrama de secuencia del flujo de atención a servicios técnicos.}
+	\label{fig:secuencia}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{casos-uso-sistema.png}
+	\caption{Diagrama de casos de uso asociados a los módulos funcionales del sistema.}
+	\label{fig:casosuso}
+\end{figure}
+
+\subsection*{Módulo de productos}
+
+Este módulo permite registrar, editar y consultar productos e insumos disponibles para la venta o uso interno. Los productos se organizan jerárquicamente en familias, categorías y subcategorías, con información como nombre, precio, descripción, imágenes y diagramas técnicos. Actualmente funciona como un catálogo visual centralizado, integrable con los servicios y clientes.
+
+\subsection*{Módulo de notificaciones y comunicación interna}
+
+El sistema integra notificaciones por correo electrónico según el estado del servicio. También se contempla un sistema básico de comunicación en tiempo real mediante WebSockets para uso interno entre áreas operativas, con opción de extenderse a chat interno completo.
+
+\subsection*{Resumen visual de módulos e interacciones}
+
+La Figura~\ref{fig:modulos} muestra un esquema visual de los módulos implementados y cómo se comunican entre sí para cumplir con los objetivos del sistema.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{componentes-sistema.png}
+	\caption{Módulos principales del sistema de gestión y sus interacciones.}
+	\label{fig:modulos}
+\end{figure}
+
 	
-	El desarrollo del sistema utilizará los siguientes elementos tecnológicos:
-	\begin{itemize}
-		\item \textbf{Lenguaje de programación y entorno:} TypeScript sobre Node.js para el backend; React.js con TypeScript para el frontend.
-		\item \textbf{Base de datos:} MongoDB como sistema de almacenamiento de datos.
-		\item \textbf{Interfaz de usuario:} HTML5, CSS3, Figma y Material UI.
-		\item \textbf{Arquitectura:} Cliente-servidor basada en microservicios con comunicación vía APIs RESTful.
-		\item \textbf{Control de versiones e integración continua:} Git y GitHub Actions.
-		\item \textbf{Contenedores y despliegue:} Docker para contenerización de servicios y entornos de pruebas.
-	\end{itemize}
-	
-	El sistema contempla como alcance mínimo el desarrollo completo de los siguientes módulos funcionales:
-	
-	\begin{itemize}
-		\item Gestión de empleados y control de acceso mediante roles.
-		\item Registro de clientes, seguimiento de historial y solicitudes.
-		\item Flujo completo de servicios técnicos con notificaciones automatizadas.
-		\item Control de inventario con registros de entradas, salidas y alertas por niveles críticos.
-		\item Comunicación interna por mensajería o correo empresarial.
-		\item Generación de reportes operativos para análisis y toma de decisiones.
-	\end{itemize}
+\section{Especificación técnica}
+
+El sistema será accesible mediante una aplicación web dividida en backend y frontend independientes. Los módulos funcionales operan de forma integrada a través de APIs RESTful, alineados con los flujos reales de la empresa. La arquitectura es modular, escalable y mantenible.
+
+\subsection*{Tecnologías utilizadas}
+
+\begin{itemize}
+	\item \textbf{Backend:} NestJS con TypeScript sobre Node.js. Arquitectura modular compuesta por controladores, servicios, repositorios, DTOs y validaciones centralizadas usando \texttt{class-validator}. Esta estructura permite separar responsabilidades y mantener el sistema escalable y mantenible.
+	\item \textbf{Frontend:} React.js con TypeScript. Arquitectura basada en \textbf{Screaming Architecture} y \textbf{Clean Architecture}, lo cual permite que la estructura del proyecto refleje claramente sus funcionalidades, promoviendo una alta cohesión y bajo acoplamiento entre componentes.
+	\item \textbf{Base de datos:} MongoDB, con soporte para múltiples empresas (multitenant) mediante aislamiento lógico de datos.
+	\item \textbf{Interfaz de usuario:} HTML5 y CSS3, apoyado con Figma para diseño de prototipos y TalwindCSS para componentes accesibles y responsivos.
+	\item \textbf{Comunicación:} WebSockets para mensajería interna en tiempo real y actualizaciones automáticas de estados.
+	\item \textbf{Correo electrónico:} Protocolo SMTP para el envío automático de notificaciones operativas a usuarios internos y clientes.
+	\item \textbf{Control de versiones e integración continua:} Git para versionamiento y GitHub Actions para automatización del pipeline CI/CD.
+	\item \textbf{Contenerización y despliegue:} Uso de Docker para encapsular servicios, con despliegue en AWS (EC2 para la aplicación, S3 para archivos y Lambda para procesos automatizados).
+\end{itemize}
+
+
+\subsection*{Alcance funcional}
+
+El proyecto contempla como mínimo la implementación de los siguientes módulos:
+
+\begin{itemize}
+	\item Gestión de empleados con autenticación y roles.
+	\item Registro y administración de clientes individuales y empresariales.
+	\item Flujo completo de servicios técnicos con seguimiento automatizado.
+	\item Catálogo digital de productos e insumos.
+	\item Notificaciones por correo y sistema de comunicación interna.
+	\item Respaldo automático configurable y generación de reportes técnicos.
+	\item Soporte multitenant para múltiples compañías, según la empresa seleccionada al iniciar sesión.
+\end{itemize}
+
+\subsection*{Criterios de finalización}
+
+El sistema se considerará funcional cuando:
+
+\begin{itemize}
+	\item Cada módulo esté implementado y probado funcionalmente.
+	\item Los casos de uso estén validados y documentados.
+	\item El sistema esté desplegado en un entorno de pruebas funcional.
+	\item Se incluya documentación técnica, manual de usuario y código fuente organizado.
+	\item Se entregue una carpeta digital con el PDF final, código fuente comprimido y apéndices con el listado de código.
+\end{itemize}
+
+
 	
 	Cada módulo será considerado finalizado cuando cumpla con los casos de uso definidos, haya sido probado funcionalmente y esté debidamente documentado. Además, el sistema deberá encontrarse desplegado en un entorno de pruebas funcional para su demostración.
 	
@@ -325,7 +345,7 @@ Los recursos disponibles para el desarrollo y pruebas del sistema son los siguie
 Las herramientas que se utilizarán durante el desarrollo incluyen:
 
 \begin{itemize}
-	\item \textbf{Frontend:} React.js con TypeScript, Figma para prototipado, y Material UI para diseño de interfaz.
+	\item \textbf{Frontend:} React.js con TypeScript, Figma para prototipado, y TalwindCSS para diseño de interfaz.
 	\item \textbf{Backend:} NestJS con Node.js y MongoDB como base de datos.
 	\item \textbf{Control de versiones:} Git y GitHub.
 	\item \textbf{Contenedores y despliegue:} Docker, GitHub Actions para integración y entrega continua.
