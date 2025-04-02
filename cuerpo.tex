@@ -210,12 +210,6 @@ Esta investigación abordó la desconexión entre áreas de atención al cliente
 		\label{fig:modulos}
 	\end{figure}
 	
-
-
-
-
-
-
 	\section{Especificación técnica}
 
 	El sistema de gestión empresarial para AironTools será accesible mediante una aplicación web y estará conformado por módulos que operan de forma integrada. El proyecto contempla el desarrollo de funcionalidades específicas orientadas a los procesos clave de la empresa: atención al cliente, gestión de servicios técnicos, control de inventario, comunicación interna y administración de usuarios.
@@ -249,204 +243,156 @@ Esta investigación abordó la desconexión entre áreas de atención al cliente
 	
 	%Este texto SÍ debe incluirse para que la propuesta pueda ser aceptada.
 	Al concluir el proyecto de integración se entregará a la Coordinación de Estudios de Ingeniería en Computación una carpeta digital que incluirá el reporte final del proyecto en un archivo PDF (sin restricciones)\footnote{Debe poder visualizarse sin solicitar contraseña}, el código fuente del proyecto en un archivo comprimido (sin restricciones)\footnote{Debe poder descomprimirse sin solicitar contraseña}. Además, la sección de apéndices del reporte final contendrá al menos un listado del código fuente desarrollado.
-	
-\subsection{Alcance del Proyecto}
 
-El proyecto incluye el diseño, desarrollo e implementación de los siguientes módulos funcionales:
 
-\begin{itemize}
-	\item Registro y gestión de empleados con roles diferenciados.
-	\item Registro de clientes y su historial de servicios.
-	\item Gestión completa del flujo de servicios técnicos.
-	\item Control del inventario de herramientas y productos.
-	\item Notificaciones automáticas para empleados y clientes.
-	\item Comunicación interna por mensajería o correo empresarial.
-	\item Generación de reportes operativos.
-\end{itemize}
+	\section{Calendario de actividades}
 
-Cada módulo será desarrollado, probado e integrado de forma progresiva para asegurar una implementación ordenada.
+Las actividades a realizar durante el Trimestre 2025-Invierno en la UEA Proyecto de Integración de Ingeniería en Computación I (clave 1100113), con un valor de 18 créditos y una duración total de 198 horas, se presentan en la Tabla~\ref{table:calendarioActividades}.
 
-\subsection{Tecnologías y Arquitectura}
-
-El sistema utilizará una arquitectura cliente-servidor basada en microservicios. El frontend será desarrollado en \textbf{React.js} y \textbf{TypeScript}, mientras que el backend será implementado en \textbf{NestJS} sobre \textbf{Node.js}. Para el almacenamiento de datos se usará \textbf{MongoDB}, una base de datos NoSQL flexible y escalable.
-
-El sistema se ejecutará en contenedores mediante \textbf{Docker}, y el flujo de integración y entrega continua será gestionado con \textbf{GitHub Actions}.
-
-\subsection{Criterio de Finalización del Proyecto}
-
-El proyecto se considerará finalizado cuando todos los módulos definidos hayan sido desarrollados, integrados y validados mediante pruebas funcionales. Además, deberá estar documentado correctamente y desplegado en un entorno de pruebas funcional.
-
-\begin{itemize}
-	\item Todos los módulos deben cumplir con los casos de uso definidos.
-	\item Debe existir documentación técnica y manual de usuario.
-	\item El sistema debe estar instalado en un servidor funcional o entorno en la nube.
-	\item Se debe realizar una presentación funcional ante la Coordinación.
-\end{itemize}
-
-\textbf{Figura \ref{fig:componentes-sistema}} muestra la arquitectura general del sistema, y la \textbf{Figura \ref{fig:casos-uso}} representa los principales casos de uso que deben cumplirse para la validación del proyecto.
-
-\vspace{0.5cm}
-
-%Este texto SÍ debe incluirse para que la propuesta pueda ser aceptada.
-Al concluir el proyecto de integración se entregará a la Coordinación de Estudios de Ingeniería en Computación una carpeta digital que incluirá el reporte final del proyecto en un archivo PDF (sin restricciones)\footnote{Debe poder visualizarse sin solicitar contraseña}, el código fuente de la aplicación en un archivo comprimido (sin restricciones)\footnote{Debe poder descomprimirse sin solicitar contraseña}. Además, la sección de apéndices del reporte final contendrá al menos un listado del código fuente desarrollado.
-
-\section{Calendario de Actividades}
-
-El desarrollo del proyecto se llevará a cabo durante el trimestre 2025-Invierno, como parte de la UEA "Proyecto de Integración de Ingeniería en Computación I" (clave 1100113), con un valor de 18 créditos y una duración de 198 horas.
-
-A continuación se presenta el calendario de actividades, distribuido en 10 fases principales, cada una con su respectivo número de horas y entregables.
-
-\begin{longtable}{p{0.05\textwidth} p{0.45\textwidth} p{0.1\textwidth} p{0.30\textwidth}}
-	\label{table:calendarioActividades}                                                                                                                                               \\
+\begin{longtable}{p{0.05\textwidth} p{0.4\textwidth} p{0.1\textwidth} p{0.35\textwidth}}
+	\caption{Listado de actividades a realizar durante el Trimestre 2025-Invierno.}
+  	\label{table:calendarioActividades}\\
 	\toprule
-	\textbf{No.} & \textbf{Actividad}                                                           & \textbf{Horas} & \textbf{Entregable}                                                \\
+	\textbf{No.} & \textbf{Actividad} & \textbf{Horas} & \textbf{Entregable} \\
 	\hline
 	\endfirsthead
 
+	\multicolumn{4}{c}{\textbf{Continuación de la Tabla \ref{table:calendarioActividades}}}\\
 	\hline
-	\textbf{No.} & \textbf{Actividad}                                                           & \textbf{Horas} & \textbf{Entregable}                                                \\
+	\textbf{No.} & \textbf{Actividad} & \textbf{Horas} & \textbf{Entregable} \\
 	\hline
 	\endhead
 
 	\hline
-	\caption{Listado de actividades a realizar durante el trimestre 2025-Invierno.}
 	\endlastfoot
 
-	1            & Levantamiento de requerimientos y análisis del sistema actual en AironTools. & 20             & Documento de requerimientos                                        \\
+	1 & Levantamiento de requerimientos y análisis del sistema actual en AironTools. & 20 & Documento de requerimientos \\
 	\midrule
 
-	2            & Diseño de arquitectura del sistema y definición de módulos.                  & 20             & Diagramas de arquitectura y diseño técnico                         \\
+	2 & Diseño de arquitectura del sistema y definición de módulos. & 20 & Diagramas de arquitectura y diseño técnico \\
 	\midrule
 
-	3            & Desarrollo del módulo de autenticación y gestión de usuarios.                & 25             & Módulo funcional con control de acceso y roles                     \\
+	3 & Desarrollo del módulo de autenticación y gestión de usuarios. & 25 & Módulo funcional con control de acceso y roles \\
 	\midrule
 
-	4            & Desarrollo del módulo de gestión de clientes.                                & 20             & Registro, historial y vista de clientes implementados              \\
+	4 & Desarrollo del módulo de gestión de clientes. & 20 & Registro, historial y vista de clientes implementados \\
 	\midrule
 
-	5            & Desarrollo del módulo de servicios técnicos (flujo completo).                & 25             & Módulo de flujo de servicio técnico automatizado                   \\
+	5 & Desarrollo del módulo de servicios técnicos (flujo completo). & 25 & Módulo de flujo de servicio técnico automatizado \\
 	\midrule
 
-	6            & Desarrollo del módulo de inventario.                                         & 20             & Registro, movimientos y alertas de inventario                      \\
+	6 & Desarrollo del módulo de inventario. & 20 & Registro, movimientos y alertas de inventario \\
 	\midrule
 
-	7            & Implementación de sistema de notificaciones y comunicación interna.          & 20             & Notificaciones por correo, alertas internas y tareas asignadas     \\
+	7 & Implementación de sistema de notificaciones y comunicación interna. & 20 & Notificaciones por correo, alertas internas y tareas asignadas \\
 	\midrule
 
-	8            & Pruebas funcionales e integración de los módulos.                            & 20             & Reporte de pruebas, casos de uso validados                         \\
+	8 & Pruebas funcionales e integración de los módulos. & 20 & Reporte de pruebas, casos de uso validados \\
 	\midrule
 
-	9            & Despliegue en entorno de pruebas y revisión técnica.                         & 15             & Sistema desplegado en servidor y documentación preliminar          \\
+	9 & Despliegue en entorno de pruebas y revisión técnica. & 15 & Sistema desplegado en servidor y documentación preliminar \\
 	\midrule
 
-	10           & Documentación técnica y elaboración de manual de usuario.                    & 13             & Manual de usuario, guía de instalación y documentación del sistema \\
+	10 & Documentación técnica y elaboración de manual de usuario. & 13 & Manual de usuario, guía de instalación y documentación del sistema \\
 	\bottomrule
 \end{longtable}
 
-\footnotetext{Las actividades fueron diseñadas para cubrir el desarrollo completo del sistema propuesto durante el trimestre, incluyendo análisis, diseño, codificación, pruebas, despliegue y documentación final.}
+\footnotetext{La planeación cubre el análisis, diseño, desarrollo, pruebas, despliegue y documentación del sistema, abarcando las 198 horas correspondientes a la UEA mencionada.}
 
-\section{Factibilidad Técnica, Operativa y Estimación de Costos}
 
-\subsection{Factibilidad Operativa}
 
-La implementación del sistema de gestión empresarial presenta una alta factibilidad operativa en AironTools por las siguientes razones:
+
+\section{Factibilidad técnica y operativa}
+
+\subsection{Factibilidad técnica}
+
+El proyecto de desarrollo del sistema de gestión empresarial para AironTools es técnicamente viable, ya que el responsable del desarrollo cuenta con los conocimientos y habilidades necesarios para implementar los módulos definidos en el tiempo estipulado. Entre las competencias destacadas se encuentran:
 
 \begin{itemize}
-	\item \textbf{Adaptabilidad a procesos existentes:} El sistema se diseñará según las necesidades reales y flujos actuales de la empresa.
-	\item \textbf{Capacitación gradual del personal:} Se planea una estrategia progresiva de formación para cada área.
-	\item \textbf{Soporte técnico disponible:} El responsable del proyecto dentro de la empresa garantizará la continuidad técnica.
-	\item \textbf{Aprobación de dirección:} El proyecto cuenta con el respaldo directo del jefe de área: \textbf{Mtro. Víctor Benjamín Aguilar Orocio}.
+	\item Conocimientos avanzados en desarrollo web fullstack utilizando tecnologías como React.js, TypeScript y NestJS.
+	\item Experiencia en diseño e implementación de arquitecturas modulares y sistemas empresariales.
+	\item Habilidad en pruebas, documentación técnica y despliegue de sistemas.
 \end{itemize}
 
-\subsection{Factibilidad Técnica}
+Los recursos disponibles para el desarrollo y pruebas del sistema son los siguientes:
 
-El proyecto es técnicamente viable debido a los siguientes elementos disponibles:
-
-\subsubsection{Recursos de desarrollo y pruebas}
 \begin{itemize}
-	\item Equipos de cómputo con procesadores Intel i7, 16GB RAM y SSDs.
-	\item Acceso a entornos locales y remotos para desarrollo y despliegue.
-	\item Conectividad de red estable para pruebas multiusuario.
+	\item Equipos de cómputo con procesadores Intel Core i7, 16 GB de RAM y almacenamiento SSD.
+	\item Acceso a entornos locales y servidores remotos para pruebas y despliegue del sistema.
+	\item Conectividad de red estable para realizar pruebas multiusuario y simulaciones reales.
 \end{itemize}
 
-\subsubsection{Herramientas utilizadas}
+Las herramientas que se utilizarán durante el desarrollo incluyen:
+
 \begin{itemize}
-	\item \textbf{Frontend:} React.js + TypeScript, Figma, Material UI.
-	\item \textbf{Backend:} NestJS, Node.js, MongoDB.
+	\item \textbf{Frontend:} React.js con TypeScript, Figma para prototipado, y Material UI para diseño de interfaz.
+	\item \textbf{Backend:} NestJS con Node.js y MongoDB como base de datos.
 	\item \textbf{Control de versiones:} Git y GitHub.
-	\item \textbf{Despliegue:} Docker, GitHub Actions.
+	\item \textbf{Contenedores y despliegue:} Docker, GitHub Actions para integración y entrega continua.
 \end{itemize}
 
-\subsubsection{Conocimientos del desarrollador}
+No se requieren recursos físicos adicionales ni licencias de software especiales, ya que todas las herramientas son de uso libre o ya están disponibles.
+
+\subsection{Factibilidad operativa}
+
+El sistema propuesto presenta una alta factibilidad operativa dentro de la empresa AironTools, por las siguientes razones:
+
 \begin{itemize}
-	\item Experiencia en diseño de software empresarial.
-	\item Conocimientos avanzados en desarrollo fullstack.
-	\item Capacidad para realizar pruebas, documentación y despliegue.
+	\item \textbf{Adaptabilidad a los procesos actuales:} El sistema está alineado con los flujos de trabajo reales de la empresa, por lo que su adopción no requerirá una reestructuración significativa.
+	
+	\item \textbf{Aceptación organizacional:} El proyecto cuenta con el respaldo directo del jefe de área, el Ing. Víctor Benjamín Aguilar Orocio, responsable de la implementación en la empresa.
+	
+	\item \textbf{Capacitación del personal:} Se prevé una estrategia de introducción y formación progresiva, asegurando que los empleados comprendan y utilicen el sistema eficazmente.
+	
+	\item \textbf{Facilidad de uso y soporte:} La interfaz estará diseñada con criterios de usabilidad, y el sistema incluirá funciones de ayuda y comunicación interna que facilitarán su soporte continuo.
+	
+	\item \textbf{Extensibilidad y mantenimiento:} Gracias a su arquitectura modular, el sistema podrá adaptarse a futuras necesidades o integrarse con nuevas tecnologías sin comprometer su estabilidad.
 \end{itemize}
 
-\subsection{Estimación de Costos}
+\vspace{0.5cm}
+\section{Estimación de costos}
 
-La siguiente tabla muestra una estimación aproximada de los costos asociados al desarrollo e implementación del sistema durante el trimestre.
+La presente sección muestra una estimación comercial del capital necesario para el desarrollo del sistema de gestión empresarial propuesto, considerando tanto los recursos técnicos como el valor del trabajo intelectual involucrado. Se han incluido costos asociados a infraestructura, herramientas, servicios y personal. Esta estimación representa una aproximación realista en caso de que el proyecto se desee escalar o comercializar.
 
-\begin{longtable}{|p{0.5\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|}
-	\hline
-	\textbf{Rubro}                              & \textbf{Costo mensual (MXN)} & \textbf{Costo trimestral (MXN)} \\
+La estimación de costos del proyecto se presenta en la Tabla~\ref{table:tablaCostos}.
+
+\begin{longtable}{m{6.5cm} m{4.5cm} m{4cm}}
+	\caption{Estimación de costos del proyecto.}
+  	\label{table:tablaCostos}\\
+  	\toprule
+	\textbf{Descripción} & \textbf{Costo unitario (MXN)} & \textbf{Costo total (MXN)} \\
 	\hline
 	\endfirsthead
 
+	\multicolumn{3}{c}{\textbf{Continuación de la Tabla \ref{table:tablaCostos}}}\\
 	\hline
-	\textbf{Rubro}                              & \textbf{Costo mensual (MXN)} & \textbf{Costo trimestral (MXN)} \\
+	\textbf{Descripción} & \textbf{Costo unitario (MXN)} & \textbf{Costo total (MXN)} \\
 	\hline
 	\endhead
 
-	Infraestructura de servidores y pruebas     & \$3,000                      & \$9,000                         \\
 	\hline
-	Licencias y servicios en la nube            & \$2,000                      & \$6,000                         \\
-	\hline
-	Desarrollo de software (frontend y backend) & \$25,000                     & \$75,000                        \\
-	\hline
-	Diseño UI/UX y prototipos                   & \$10,000                     & \$30,000                        \\
-	\hline
-	Capacitación y soporte al personal          & \$5,000                      & \$15,000                        \\
-	\hline
-	Pruebas de calidad y documentación          & \$4,000                      & \$12,000                        \\
-	\hline
-	\textbf{Total estimado}                     & \textbf{\$49,000}            & \textbf{\$147,000}              \\
-	\hline
-	\caption{Estimación de costos para el desarrollo del sistema propuesto.}
-	\label{tabla:costos}
+	\endlastfoot
+
+Infraestructura de servidores (entorno de pruebas y producción) & \$3,000.00 $\times$ 1 mes & \$9,000.00 (3 meses) \\
+\midrule
+
+Servicios en la nube (almacenamiento, correos, CI/CD) & \$2,000.00 $\times$ 1 mes & \$6,000.00 (3 meses) \\
+\midrule
+
+Trabajo de desarrollo (fullstack)~\cite{Desarrollador} & \$25,000.00 $\times$ 1 mes & \$75,000.00 (3 meses) \\
+\midrule
+
+Diseño UI/UX y prototipado de interfaces & \$10,000.00 $\times$ 1 mes & \$30,000.00 (3 meses) \\
+\midrule
+
+Capacitación y soporte técnico interno & \$5,000.00 $\times$ 1 mes & \$15,000.00 (3 meses) \\
+\midrule
+
+Pruebas, validación y documentación & \$4,000.00 $\times$ 1 mes & \$12,000.00 (3 meses) \\
+\midrule
+
+\textbf{Costo total estimado} & — & \textbf{\$147,000.00} \\
+\bottomrule
 \end{longtable}
 
-\footnotetext{Los costos fueron estimados con base en referencias de mercado y validación interna con el responsable del área. Incluyen desarrollo, pruebas, capacitación e infraestructura necesaria para el trimestre.}
-
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{componentes-sistema.png}
-	\caption{Diagrama de Componentes del Sistema}
-	\label{fig:componentes-sistema}
-\end{figure}
-
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{casos-uso-sistema.png}
-	\caption{Diagrama de Casos de Uso del Sistema}
-	\label{fig:casos-uso}
-\end{figure}
-
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{secuencia-sistema.png}
-	\caption{Diagrama de Secuencia del Sistema}
-	\label{fig:secuencia-sistema}
-\end{figure}
-
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\textwidth]{sistema.png}
-	\caption{Vista general del sistema propuesto}
-	\label{fig:vista-general}
-\end{figure}
+\footnotetext{Los valores fueron obtenidos con base en referencias de mercado, experiencia previa en proyectos similares y validación con el responsable directo en la empresa. Incluyen costos de infraestructura, servicios, diseño, desarrollo y soporte.}
