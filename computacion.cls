@@ -1,14 +1,10 @@
 \NeedsTeXFormat{LaTeX2e}
 \LoadClass[11pt, letterpaper]{article}
-\pdfminorversion 4
+\pdfminorversion=4
 
 %Para no resaltar las ligas
 \RequirePackage[hidelinks]{hyperref}
 \RequirePackage{listings}
-
-%\usepackage[sfdefault]{plex-sans} % Use IBM Plex Sans as the sans font and make it the default
-%\usepackage{plex-serif} % Use IBM Plex Serif as the serif font
-%\usepackage{plex-mono}
 
 %Determinar el tamaño del papel y el margen
 \RequirePackage[letterpaper, margin=1in]{geometry}
@@ -22,27 +18,26 @@
 \RequirePackage{graphicx} 
 \RequirePackage{ragged2e}
 
-%Para utilizar diagramas de Gantt
-\RequirePackage{pgfgantt} 
+%Para diagramas de Gantt
+\RequirePackage{pgfgantt}
 
-%Para el resaltado en amarillo de las modificaciones
+%Para resaltar
 \RequirePackage{soul}
-%\RequirePackage{soulutf8}
 
-%Para colocar las notas al pie de página al final sin importar que quede espacio vacío
+%Para notas al pie al final sin desperdicio
 \RequirePackage[bottom]{footmisc}
 \RequirePackage{etoolbox}
 \RequirePackage{ifthen}
 
-%Para el tipo tamaño de las letras en section y subsection
+%Para el tipo y tamaño de letras en secciones
 \RequirePackage{titlesec}
 \titleformat*{\section}{\large\bfseries}
 \titleformat*{\subsection}{\normalsize\bfseries}
-\RequirePackage{palatino} %Tipo
+\RequirePackage{palatino}
 
-%Para indicar que se usará Figura y Tabla en español, además, se coloca como separador un punto
+%Para indicar Figura y Tabla en español
 \RequirePackage{caption}
-\captionsetup{skip=5pt} 
+\captionsetup{skip=5pt}
 \captionsetup{font={bf}}
 \captionsetup[figure]{name={Figura },labelsep=period}
 \captionsetup[table]{name={Tabla },labelsep=period}
@@ -50,7 +45,6 @@
 %Utilizar el idioma español en la fecha
 \RequirePackage[spanish]{babel}
 \RequirePackage{enumitem}
-
 \usepackage{booktabs}
 \addtolength\aboverulesep{0.0ex}
 \addtolength\belowrulesep{0.0ex}
@@ -58,9 +52,7 @@
 
 \RequirePackage[T1]{fontenc}
 \graphicspath{{./Imagenes/}}
-%\small UAM-Azcapotzalco
 \RequirePackage{fancyhdr}
-%\setitemize[0]{topsep=0pt,itemsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=10pt}
 
 \fancyhead{}
 \fancyhead[L]{\footnotesize \fontfamily{qtm}\selectfont Propuesta de Proyecto de Integración}
@@ -70,42 +62,7 @@
 \fancyfoot[L]{\footnotesize \fontfamily{qtm}\selectfont UAM-Azcapotzalco}
 \fancyfoot[C]{}
 
-\definecolor{codegreen}{rgb}{0,0.6,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-
-\lstdefinestyle{mystyle}{
-	backgroundcolor=\color{backcolour},   
-	commentstyle=\color{codegreen},
-	keywordstyle=\color{magenta},
-	numberstyle=\tiny\color{codegray},
-	stringstyle=\color{codepurple},
-	basicstyle=\ttfamily\footnotesize,
-	breakatwhitespace=false,         
-	breaklines=true,                 
-	captionpos=b,                    
-	keepspaces=true,                 
-	numbers=left,                    
-	numbersep=5pt,                  
-	showspaces=false,                
-	showstringspaces=false,
-	showtabs=false,                  
-	tabsize=2
-}
-
-\lstdefinestyle{mystyle2}
-{
-	language=[LaTeX]{TeX},
-	texcsstyle=*\color{blue},
-	basicstyle=\ttfamily,
-	moretexcs={mycommand}, % user command highlight
-	frame=single,
-}
-
-\lstset{style=mystyle2}
-
-%Definición de variables
+%================= Definición de variables =====================
 \def\version#1{\def\@version{#1}}
 \def\trimestre#1{\def\@trimestre{#1}}
 \def\tipo#1{\def\@tipo{#1}}
@@ -126,170 +83,153 @@
 
 \bibliographystyle{IEEEtran}
 
-%REnombres de algunos comandos
+%============ Comandos para portada, asesores, declaratoria, etc. ===========
+
 \newcommand{\portada}{\maketitle}
-\newcommand{\referencias}{\bibliography{./Referencias/piic.bib} }
+\newcommand{\referencias}{\bibliography{./Referencias/piic.bib}}
 \newcommand{\responsabilidad}{\resp}
 
-
+%Responsabilidad: con firma
 \newcommand{\resp}{
-	\ifthenelse{\equal{\@coasesor}{\empty}}
-	%Este texto SÍ debe incluirse para que la propuesta pueda ser aceptada (con el ajuste mencionado en género y número de asesores).
-	{El/La asesor(a) se responsabiliza de guiar al alumnado y de que todos los recursos mencionados en la Factibilidad Técnica estarán disponibles para el alumnado, de modo que el proyecto de integración se pueda concluir en tiempo y forma.\\[2.5cm]
-	%Cerrar esta sección con una conclusión
-	\begin{center}
-		\begin{minipage}{0.5\textwidth}
-			\centering
-			\small\@asesor\\ %grado y nombre completo del asesor
-			\textbf{\@rola}\\
-		\end{minipage}
-	\end{center}}
-	{Las/Los asesoras(es) se responsabilizan de guiar al alumnado y de que todos los recursos mencionados en la Factibilidad Técnica estarán disponibles para el alumnado, de modo que el proyecto de integración se pueda concluir en tiempo y forma.\\[2.5cm]
-	%Cerrar esta sección con una conclusión
-	\begin{center}
-		\begin{minipage}{0.4\textwidth}
-			\centering
-			\small\@asesor\\ %grado y nombre completo del asesor
-			\textbf{\@rola}\\
-		\end{minipage}\hspace*{2cm}
-	\begin{minipage}{0.4\textwidth}
-		\centering
-		\small\@coasesor\\ %grado y nombre completo del asesor
-		\textbf{\@rolb}\\
-	\end{minipage}
-\end{center}}
+  \ifthenelse{\equal{\@coasesor}{\empty}}
+  {
+    El/La asesor(a) se responsabiliza de guiar al alumnado y de que todos los recursos mencionados en la Factibilidad Técnica estarán disponibles para el alumnado, de modo que el proyecto de integración se pueda concluir en tiempo y forma.\\[2.5cm]
+    \begin{center}
+      \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[height=1.5cm]{Imagenes/Firma-Victor-Benjamin-Aguilar-Orocio.png}\\[0.2cm]
+        \small\@asesor\\
+        \textbf{\@rola}\\
+      \end{minipage}
+    \end{center}
+  }
+  {
+    Las/Los asesoras(es) se responsabilizan de guiar al alumnado y de que todos los recursos mencionados en la Factibilidad Técnica estarán disponibles para el alumnado, de modo que el proyecto de integración se pueda concluir en tiempo y forma.\\[2.5cm]
+    \begin{center}
+      \begin{minipage}{0.4\textwidth}
+        \centering
+        \includegraphics[height=1.5cm]{Imagenes/Firma-Victor-Benjamin-Aguilar-Orocio.png}\\[0.2cm]
+        \small\@asesor\\
+        \textbf{\@rola}\\
+      \end{minipage}\hspace*{2cm}
+      \begin{minipage}{0.4\textwidth}
+        \centering
+        \small\@coasesor\\
+        \textbf{\@rolb}\\
+      \end{minipage}
+    \end{center}
+  }
 }
 
-%Formato para los profesores en la portada, ya sea que solo haya un asesor o dos
-\newcommand{\asesores}[8]{\ifthenelse{\equal{#5}{\empty}}
-	{
-			%Si el parámetro 5 (\@coasesor) esta vacio, unicamente se imprime los datos del asesor
-			\begin{minipage}{0.5\linewidth}
-			\centering
-			\textbf{\fontfamily{qtm}\selectfont{\@rola}}\\ %Rol del primer asesor
-			#1\\%Grado y nombre del asesor
-			#2\\%Categoría del asesor, e.g. Profesor Titular, Profesor Asociado
-			#3\\%Departamento, e.g. Departamento de Sistemas
-			\href{mailto:#4}{#4}%Correo del asesor
-			\end{minipage}
-	}
-	{
-		%Si el parámetro 5 (\@coasesor) NO esta vacio se imprimen los datos de los dos asesores
-		\begin{minipage}{0.4\textwidth}
-			\centering
-			\textbf{\fontfamily{qtm}\selectfont{\@rola}}\\%Rol del primer asesor
-			#1\\%Grado y nombre del asesor
-			#2\\%Categoría del asesor, e.g. Profesor Titular, Profesor Asociado
-			#3\\%Departamento, e.g. Departamento de Sistemas
-			\href{mailto:#4}{#4}%Correo del asesor
-		\end{minipage}\hspace*{2cm}
-		\begin{minipage}{0.4\textwidth}
-			\centering
-			\textbf{\fontfamily{qtm}\selectfont{\@rolb}}\\
-			#5\\%Grado y nombre del asesor
-			#6\\%Categoría del asesor, e.g. Profesor Titular, Profesor Asociado
-			#7\\%Departamento, e.g. Departamento de Sistemas
-			\href{mailto:#8}{#8}%Correo del asesor
-		\end{minipage}}\\[2.5cm] 
-%
+%Asesores en la portada
+\newcommand{\asesores}[8]{%
+  \ifthenelse{\equal{#5}{\empty}}
+  { % un asesor
+    \begin{minipage}{0.5\linewidth}
+      \centering
+      \includegraphics[height=1.5cm]{Imagenes/Firma-Victor-Benjamin-Aguilar-Orocio.png}\\[0.2cm]
+      \textbf{\fontfamily{qtm}\selectfont{\@rola}}\\
+      #1\\
+      #2\\
+      #3\\
+      \href{mailto:#4}{#4}
+    \end{minipage}
+  }
+  { % hay coasesor
+    \begin{minipage}{0.4\textwidth}
+      \centering
+      \includegraphics[height=1.5cm]{Imagenes/Firma-Victor-Benjamin-Aguilar-Orocio.png}\\[0.2cm]
+      \textbf{\fontfamily{qtm}\selectfont{\@rola}}\\
+      #1\\
+      #2\\
+      #3\\
+      \href{mailto:#4}{#4}
+    \end{minipage}\hspace*{2cm}
+    \begin{minipage}{0.4\textwidth}
+      \centering
+      \textbf{\fontfamily{qtm}\selectfont{\@rolb}}\\
+      #5\\
+      #6\\
+      #7\\
+      \href{mailto:#8}{#8}
+    \end{minipage}
+  }\\[1cm]
 }
 
-%Impresion de asesores para la Declaratoria
-\newcommand{\asesoresp}[2]{
-	\ifthenelse{\equal{#2}{\empty }}
-	{	\centering
-		\begin{minipage}{0.45\linewidth}
-			\centering
-			\small #1\\%Grado y nombre del asesor
-			\textbf{\@rola}\\
-		\end{minipage}\\[2.5cm]
-	}
-	{\begin{minipage}{0.45\linewidth}
-			\centering
-			\small #1\\%Grado y nombre del asesor
-			\textbf{\@rola}\\
-		\end{minipage}\hspace*{2cm}
-		\begin{minipage}{0.45\linewidth}
-			\centering
-			\small #2\\%Grado y nombre del asesor
-			\textbf{\@rolb}\\
-		\end{minipage}\\[2.5cm] 
-	}%
+%Asesores en la Declaratoria
+\newcommand{\asesoresp}[2]{%
+  \ifthenelse{\equal{#2}{\empty}}
+  {
+    \centering
+    \begin{minipage}{0.45\linewidth}
+      \centering
+      \includegraphics[height=1.5cm]{Imagenes/Firma-Victor-Benjamin-Aguilar-Orocio.png}\\[0.2cm]
+      \small #1\\
+      \textbf{\@rola}\\
+    \end{minipage}\\[2cm]
+  }
+  { % hay coasesor
+    \begin{minipage}{0.45\linewidth}
+      \centering
+      \includegraphics[height=1.5cm]{Imagenes/Firma-Victor-Benjamin-Aguilar-Orocio.png}\\[0.2cm]
+      \small #1\\
+      \textbf{\@rola}\\
+    \end{minipage}\hspace*{2cm}
+    \begin{minipage}{0.45\linewidth}
+      \centering
+      \small #2\\
+      \textbf{\@rolb}\\
+    \end{minipage}\\[2cm]
+  }%
 }
 
-
-
-\newcommand{\declaratoria}[1]{
-	\ifthenelse{\equal{#1}{Experiencia Profesional}}
-	{\noindent \small Esta propuesta es solo para aprobar el Seminario de Integración en Ingeniería en Computación.}
-	{ }%
+\newcommand{\declaratoria}[1]{%
+   \ifthenelse{\equal{#1}{Experiencia Profesional}}
+   {
+     \noindent \small Esta propuesta es solo para aprobar el Seminario de Integración en Ingeniería en Computación.
+   }
+   {}
 }
 
-\makeatletter         
+\makeatletter
 \renewcommand\maketitle{
-	{
-		\begin{titlepage}
-			\vspace*{\fill} %Centra el contenido de la página verticalmente
-			\center % Centra todo el contenido de la página horizontalmente
-			\fontfamily{bch}\selectfont
-			%-------------------------------------------------------------------------------
-			%	Encabezado de la portada
-			%-------------------------------------------------------------------------------
-			\includegraphics[width=\textwidth]{banner}
-			\vspace{2cm}
-		
-			%-------------------------------------------------------------------------------
-			%	Título
-			%-------------------------------------------------------------------------------
-			
-			{\Large\textbf{\fontfamily{qtm}\selectfont{\@titulo}}}\\[0.5cm]
-			%Modifica esta frase para que se ajuste al número de revisión que corresponda
-			\@tipo\\[0.1cm]
-			\@version~versión\\[0.1cm]
-			Trimestre \@trimestre \\[3cm] %Modifica el año y el período
-			
-			%-------------------------------------------------------------------------------
-			%	Autor
-			%-------------------------------------------------------------------------------
-			\small
-			\textbf{\fontfamily{qtm}\selectfont{\@rol}}\\
-			\@alumno\\ %Tu nombre
-			\@matricula\\%Tu matrícula
-			\href{mailto:al\@matricula @azc.uam.mx}{al\@matricula @azc.uam.mx}\\[3.5cm] %Espacio antes de los datos de asesores.
-				
-			%-------------------------------------------------------------------------------
-			%	Asesores
-			%-------------------------------------------------------------------------------
-			\asesores{\@asesor}{\@categoria}{\@departamento}{\@correo}{\@coasesor}{\@categoriacoasesor}{\@departamentocoasesor}{\@correocoasesor}
-			
-			%-------------------------------------------------------------------------------
-			%	Fecha de entrega
-			%-------------------------------------------------------------------------------
-			
-			\textspanish{\today}
-			\normalsize
-			
-			\vfill %Rellena el espacio sobrante con espacios en blanco
-			\vspace*{\fill}
-	\end{titlepage}
+  {
+    \begin{titlepage}
+      \centering
+      \fontfamily{bch}\selectfont
 
-\thispagestyle{empty}
-\section*{\centering Declaratoria}
-\noindent \justifying{En caso de que el Comité de Estudios de la Licenciatura en Computación apruebe la realización de la presente propuesta, otorgamos nuestra autorización para su publicación en la página de la División de Ciencias Básicas e Ingeniería.}\\[4cm]
+      \includegraphics[width=\textwidth]{banner}
 
-\centering{\small\@alumno}\\
-\small\textbf{\@rol}\\[4cm]
+      \vspace{2cm}
+      {\Large\textbf{\fontfamily{qtm}\selectfont{\@titulo}}}\\[0.5cm]
+      \@tipo\\[0.1cm]
+      \@version~versión\\[0.1cm]
+      Trimestre \@trimestre \\[2.5cm]
 
-\asesoresp{\@asesor}{\@coasesor}
+      \small
+      \textbf{\fontfamily{qtm}\selectfont{\@rol}}\\
+      \@alumno\\
+      \@matricula\\
+      \href{mailto:al\@matricula @azc.uam.mx}{al\@matricula @azc.uam.mx}\\[1cm]
 
-%Coloca al final de la página el párrafo
-\vfill
-%Este párrafo es solo si van a presentar su propuesta en la modalidad de Experiencia profesional
-\declaratoria{\@tipo}
-%En caso contrario, eliminar este párrafo
+      \asesores{\@asesor}{\@categoria}{\@departamento}{\@correo}{\@coasesor}{\@categoriacoasesor}{\@departamentocoasesor}{\@correocoasesor}
 
-\newpage
+      \textspanish{\today}
 
+    \end{titlepage}
 
-}} % Note the extra }
+    \thispagestyle{empty}
+    \section*{\centering Declaratoria}
+    \noindent \justifying
+    En caso de que el Comité de Estudios de la Licenciatura en Computación apruebe la realización de la presente propuesta, otorgamos nuestra autorización para su publicación en la página de la División de Ciencias Básicas e Ingeniería.\\[2cm]
+
+    \centering{\small\@alumno}\\
+    \small\textbf{\@rol}\\[2cm]
+
+    \asesoresp{\@asesor}{\@coasesor}
+
+    %CERRAMOS ESTA PÁGINA AQUÍ
+    \newpage
+  }
+}
 \makeatother
