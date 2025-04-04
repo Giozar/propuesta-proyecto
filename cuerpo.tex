@@ -243,7 +243,7 @@ Automatiza el flujo completo de atención a servicios como reparación, mantenim
 
 \subsection*{Módulo de productos}
 
-Este módulo permite registrar, editar y consultar productos e insumos disponibles para la venta o uso interno. Los productos se organizan jerárquicamente en familias, categorías y subcategorías, con información como nombre, precio, descripción, imágenes y diagramas técnicos. Actualmente funciona como un catálogo visual centralizado, integrable con los servicios y clientes.
+Este módulo permite registrar, editar y consultar productos disponibles para la venta o uso interno. Los productos se organizan jerárquicamente en familias, categorías y subcategorías, con información como nombre, precio, descripción, imágenes y diagramas técnicos. Actualmente funciona como un catálogo visual centralizado, integrable con los servicios y clientes.
 
 \subsection*{Módulo de notificaciones y comunicación interna}
 
@@ -268,7 +268,7 @@ El sistema será accesible mediante una aplicación web dividida en backend y fr
 \subsection*{Tecnologías utilizadas}
 
 \begin{itemize}
-	\item \textbf{Backend:} NestJS con TypeScript sobre Node.js. Arquitectura modular compuesta por controladores, servicios, repositorios, DTOs y validaciones centralizadas usando \texttt{class-validator}. Esta estructura permite separar responsabilidades y mantener el sistema escalable y mantenible.
+	\item \textbf{Backend:} NestJS con TypeScript sobre Node.js. Arquitectura modular compuesta por controladores, servicios, repositorios, DTOs y validaciones centralizadas. Esta estructura permite separar responsabilidades y mantener el sistema escalable y mantenible.
 	\item \textbf{Frontend:} React.js con TypeScript. Arquitectura basada en \textbf{Screaming Architecture} y \textbf{Clean Architecture}, lo cual permite que la estructura del proyecto refleje claramente sus funcionalidades, promoviendo una alta cohesión y bajo acoplamiento entre componentes.
 	\item \textbf{Base de datos:} MongoDB, con soporte para múltiples empresas (multitenant) mediante aislamiento lógico de datos.
 	\item \textbf{Interfaz de usuario:} HTML5 y CSS3, apoyado con Figma para diseño de prototipos y TalwindCSS para componentes accesibles y responsivos.
@@ -287,7 +287,7 @@ El proyecto contempla como mínimo la implementación de los siguientes módulos
 	\item Gestión de empleados con autenticación y roles.
 	\item Registro y administración de clientes individuales y empresariales.
 	\item Flujo completo de servicios técnicos con seguimiento automatizado.
-	\item Catálogo digital de productos e insumos.
+	\item Catálogo digital de productos.
 	\item Notificaciones por correo y sistema de comunicación interna.
 	\item Respaldo automático configurable y generación de reportes técnicos.
 	\item Soporte multitenant para múltiples compañías, según la empresa seleccionada al iniciar sesión.
