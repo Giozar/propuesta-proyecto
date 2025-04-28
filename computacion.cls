@@ -93,7 +93,7 @@
 \newcommand{\resp}{
   \ifthenelse{\equal{\@coasesor}{\empty}}
   {
-    El/La asesor(a) se responsabiliza de guiar al alumnado y de que todos los recursos mencionados en la Factibilidad Técnica estarán disponibles para el alumnado, de modo que el proyecto de integración se pueda concluir en tiempo y forma.\\[2.5cm]
+    \hl{EL asesor} se responsabiliza de guiar al alumnado y de que todos los recursos mencionados en la Factibilidad Técnica estarán disponibles para el alumnado, de modo que el proyecto de integración se pueda concluir en tiempo y forma.\\[2.5cm]
     \begin{center}
       \begin{minipage}{0.5\textwidth}
         \centering
@@ -206,6 +206,8 @@
       \@version~versión\\[0.1cm]
       Trimestre \@trimestre \\[2.5cm]
 
+
+      \includegraphics[height=1.5cm]{Imagenes/mifirma.png}\\[0.2cm]
       \small
       \textbf{\fontfamily{qtm}\selectfont{\@rol}}\\
       \@alumno\\
@@ -223,8 +225,14 @@
     \noindent \justifying
     En caso de que el Comité de Estudios de la Licenciatura en Computación apruebe la realización de la presente propuesta, otorgamos nuestra autorización para su publicación en la página de la División de Ciencias Básicas e Ingeniería.\\[2cm]
 
-    \centering{\small\@alumno}\\
-    \small\textbf{\@rol}\\[2cm]
+    \centering
+    \begin{minipage}{0.4\textwidth}
+      \centering
+      \includegraphics[height=1.5cm]{Imagenes/mifirma.png}\\[0.2cm]
+      {\small\@alumno}\\
+      \textbf{\@rol}
+    \end{minipage}\\[2cm]
+
 
     \asesoresp{\@asesor}{\@coasesor}
 
