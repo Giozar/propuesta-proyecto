@@ -93,7 +93,7 @@
 \newcommand{\resp}{
   \ifthenelse{\equal{\@coasesor}{\empty}}
   {
-    \hl{EL asesor} se responsabiliza de guiar al alumnado y de que todos los recursos mencionados en la Factibilidad Técnica estarán disponibles para el alumnado, de modo que el proyecto de integración se pueda concluir en tiempo y forma.\\[2.5cm]
+    \hl{El asesor} se responsabiliza de guiar al alumnado y de que todos los recursos mencionados en la Factibilidad Técnica estarán disponibles para el alumnado, de modo que el proyecto de integración se pueda concluir en tiempo y forma.\\[2.5cm]
     \begin{center}
       \begin{minipage}{0.5\textwidth}
         \centering
